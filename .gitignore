@@ -1,7 +1,6 @@
-output/
-tiddlers/\$__StoryList.tid
-tiddlers/\$__ShowEditPreview.tid
-tiddlers/\$__comments*
+wiki/output/
+tiddlers/config/StoryList.tid
+tiddlers/config/ShowEditPreview.tid
 
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node

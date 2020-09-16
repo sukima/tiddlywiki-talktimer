@@ -1,0 +1,63 @@
+creator: Sukima
+title: $:/plugins/sukima/talktimer/readme
+type: text/vnd.tiddlywiki
+
+A Toast Masters style timer will turn green when you've matched the goal time, yellow when you are near over time, and red when the timer is past the cutoff time.
+
+In Toast Masters usually one person is responsible for timing a talk and will show colored cards. I found this feedback helpful during talks but also don't always have someone there to time me.
+
+This plugin works well with my [[presentation plugin|https://sukima.github.io/tiddlywiki-reveal-js]].
+
+This exposes a `<$talktimer/>` widget which is a button. Clicking on the button will start/pause the timer, <kbd>Alt</kbd> clicking will reset the timer to zero.
+
+```xml
+<$talktimer/>
+```
+
+!! Usage
+
+The widget takes the following attributes which all use the same time format: `ss`, `mm:ss`, or `hh:mm:ss`.
+
+;overtime
+:When to mark the timer as overtime (red, default: `5:00`)
+;oktime
+:When to mark the timer as goal reached (green, default: overtime / 2)
+;warntime
+:When to mark the timer as warning nearing over time (yellow, default: half way between oktime and overtime)
+
+
+!! Customization
+
+If you wish to customize the look you can add a `class` attribute and use CSS. The markup is a `button` with a `time` element as the button label. The button will have a `data-state` attribute you can use to customize each state using the `[attribute~=value]` CSS selector.
+
+By default the button will have a `talktimer` class which comes bundled with a style already. Adding a `class` attribute will remove `talktimer` and return it to a normal tiddlywiki button.
+
+The data-state can have any of these states separated by spaces: `running`, `paused`, `undertime`, `oktime`, `warntime`, and `overtime`.
+
+For example if you wanted to make the button text change colors you could `<$talktimer class="mytimer"/>`
+
+```css
+.mytimer[data-state~=paused] {
+  border: thin solid orange;
+}
+
+.mytimer[data-state~=running] {
+  border: thin solid black;
+}
+
+.mytimer[data-state~=undertime] {
+  color: black;
+}
+
+.mytimer[data-state~=oktime] {
+  color: green;
+}
+
+.mytimer[data-state~=warntime] {
+  color: yellow;
+}
+
+.mytimer[data-state~=overtime] {
+  color: red;
+}
+```

@@ -1,0 +1,14 @@
+created: 20200917130544546
+creator: Sukima
+modified: 20200917130624137
+modifier: Sukima
+title: Install
+type: text/vnd.tiddlywiki
+
+You can easily install this to your wiki via drag and drop. Click and drag the link below to your running ~TiddlyWiki.
+
+<big>[[Talk Timer Plugin|$:/plugins/sukima/talktimer]]</big>
+
+Alternatively, you can get the entire source from [[GitHub|https://github.com/sukima/tiddlywiki-talktimer/]]. Either clone the repository or get a [[Zip archive|https://github.com/sukima/tiddlywiki-talktimer/archive/master.zip]].
+
+Then the `plugins` directory can be copied to your own [[Node.js version of TiddlyWIki|https://tiddlywiki.com/#Installing%20custom%20plugins%20on%20Node.js]].

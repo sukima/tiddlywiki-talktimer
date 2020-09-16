@@ -1,0 +1,63 @@
+title: talktimer.css
+tags: $:/tags/Stylesheet
+type: text/css
+
+.talktimer {
+  --color-shadow: #7f7f7f;
+  --color-dark-text: #000000;
+  --color-invert-text: #ffffff;
+  --color-undertime: #f4f4f4;
+  --color-oktime: #3fe491;
+  --color-warntime: #f4d02d;
+  --color-overtime: #ff0040;
+  --paused-opacity: 0.6;
+
+  border: none;
+  border-radius: 1em;
+  box-shadow: .2rem .2rem .5rem var(--color-shadow);
+  padding: 10em 4em;
+  margin: 0;
+  width: 100%;
+}
+
+.talktimer > time {
+  font-family: "Lucida Console", "Monaco", monospace;
+  font-size: 4em;
+  font-weight: 600;
+  position: relative;
+}
+
+.talktimer[data-state~=paused] {
+  opacity: var(--paused-opacity);
+}
+
+.talktimer[data-state~=paused] > time::after {
+  content: "*";
+  font-size: .6em;
+  position: absolute;
+  top: 0;
+}
+
+.talktimer[data-state~=running] {
+  box-shadow: .4rem .4rem .4rem var(--color-shadow);
+}
+
+.talktimer[data-state~=undertime] {
+  background-color: var(--color-undertime);
+  color: var(--color-dark-text);
+}
+
+.talktimer[data-state~=oktime] {
+  background-color: var(--color-oktime);
+  color: var(--color-invert-text);
+}
+
+.talktimer[data-state~=warntime] {
+  background-color: var(--color-warntime);
+  color: var(--color-dark-text);
+}
+
+.talktimer[data-state~=overtime] {
+  background-color: var(--color-overtime);
+  color: var(--color-invert-text);
+}

@@ -1,17 +1,18 @@
 {
-  "name": "tiddlywiki-talk-timer",
+  "name": "tiddlywiki-talktimer",
+  "private": true,
   "version": "1.0.0",
   "description": "Widget to show a Talk Timer like you might have a Toast Masters",
   "author": "Devin Weaver (@sukima) <suki@tritarget.org>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sukima/tiddlywiki-talk-timer.git"
+    "url": "https://github.com/sukima/tiddlywiki-talktimer.git"
   },
   "scripts": {
-    "start": "tiddlywiki +plugins/tiddlywiki/filesystem +plugins/tiddlywiki/tiddlyweb --listen",
-    "build": "tiddlywiki --build index",
-    "deploy": "yarn build && gh-pages -d output -b gh-pages"
+    "start": "tiddlywiki +plugins/tiddlywiki/filesystem +plugins/tiddlywiki/tiddlyweb wiki --listen",
+    "build": "tiddlywiki wiki --build index",
+    "deploy": "yarn build && gh-pages -d wiki/output -b gh-pages"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
@@ -20,10 +21,10 @@
   },
   "dependencies": {},
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "volta": {
-    "node": "12.16.2",
+    "node": "14.11.0",
     "yarn": "1.22.5"
   }
 }
