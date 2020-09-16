@@ -1,0 +1,18 @@
+{
+    "description": "Widget to show a Talk Timer like you might have a Toast Masters",
+    "plugins": [
+        "tiddlywiki/highlight"
+    ],
+    "themes": [
+        "tiddlywiki/vanilla",
+        "tiddlywiki/snowwhite"
+    ],
+    "build": {
+        "index": [
+            "--rendertiddler",
+            "$:/core/save/all",
+            "index.html",
+            "text/plain"
+        ]
+    }
+}

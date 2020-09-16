@@ -1,0 +1,10 @@
+{
+	"title": "$:/plugins/sukima/talk-timer",
+	"description": "Widget to show a Talk Timer like you might have a Toast Masters",
+	"author": "sukima",
+	"version": "1.0.0",
+	"core-version": ">=5.1.21",
+	"source": "https://github.com/sukima/talk-timer",
+	"plugin-type": "plugin",
+	"list": "readme license"
+}
